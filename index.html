@@ -48,6 +48,7 @@ nav a { text-decoration: none; color: var(--nyu-purple); font-size: .9rem;
   padding: .25rem .7rem; border-radius: 999px; font-weight: 500; }
 nav a:hover { background: rgba(79,44,133,.08); }
 nav a.here { background: var(--nyu-purple); color: #fff; }
+.navdiv { width: 1px; align-self: stretch; background: #ddd4ff; margin: .1rem .3rem; }
 @media (max-width: 560px) { nav { padding: .45rem 1rem; gap: .2rem; } nav a { padding: .2rem .55rem; font-size: .85rem; } }
 main { max-width: 1060px; margin: 0 auto; padding: 2rem 2.25rem 3rem; }
 @media (max-width: 560px) { main { padding: 1.1rem 1rem 2.5rem; } }
@@ -102,6 +103,14 @@ details[open] summary::before { content: "− "; }
 footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--lav);
   font-size: .8rem; color: #555; text-align: center; }
 @media print { nav, details summary { display: none; } details > * { display: flex; } .card { box-shadow: none; break-inside: avoid; } }
+.feature { display: grid; grid-template-columns: 260px 1fr; gap: 1.4rem; align-items: center; margin-top: 1rem;
+  text-decoration: none; color: inherit; border-color: #d9c9f2; background: linear-gradient(0deg, #fff, var(--lav)); }
+.feature:hover { box-shadow: 0 4px 16px rgba(79,44,133,.15); }
+.feature img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: .5rem; display: block; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.feature h3 { margin: .1rem 0 0; font-size: 1.3rem; color: var(--nyu-deep); }
+.feature p { margin: .4rem 0 .9rem; font-size: .92rem; }
+.btn.inline { display: inline-flex; margin-top: 0; }
+@media (max-width: 640px) { .feature { grid-template-columns: 1fr; gap: .9rem; } }
 </style>
 </head>
 <body>
@@ -116,7 +125,9 @@ footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--la
 </header>
 
 <nav aria-label="Resources">
-  <a href="#top" class="here">All</a>
+  <a href="#top" class="here">Resources</a>
+  <a href="slides.html">Address slides</a>
+  <span class="navdiv" aria-hidden="true"></span>
   <a href="#equipment">Equipment</a>
   <a href="#intranet">Intranet</a>
   <a href="#funding">Funding</a>
@@ -130,6 +141,16 @@ footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--la
     <h2>Everything from the Departmental Address, in one place</h2>
     <p class="lede">Each link and QR code from the 2026 address is below. Bookmark this page; it will be kept up to date as new resources are added.</p>
   </section>
+
+  <a class="card feature" href="slides.html" id="slides">
+    <img src="slides/thumb-01.jpg" alt="Title slide: Credit Where It&rsquo;s Due" />
+    <div>
+      <div class="kicker">The 2026 address &middot; 23 September</div>
+      <h3>Credit Where It&rsquo;s Due: the slides</h3>
+      <p>Every slide from this year&rsquo;s address. Flip through them on your phone or download the PDF.</p>
+      <span class="btn inline">View the slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </div>
+  </a>
 
   <div class="grid">
 
@@ -219,7 +240,7 @@ footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--la
 <script>
 (function () {
   // highlight the nav pill for the section in view
-  var links = [].slice.call(document.querySelectorAll("nav a"));
+  var links = [].slice.call(document.querySelectorAll('nav a[href^="#"]'));
   function mark() {
     var cur = "#top", y = window.scrollY + 140;
     links.forEach(function (a) { var id = a.getAttribute("href"); var el = id === "#top" ? null : document.querySelector(id); if (el && el.offsetTop <= y) cur = id; });
