@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Microbiology Resources &mdash; Department of Microbiology, NYU Grossman School of Medicine</title>
+<meta name="description" content="One page linking every Department of Microbiology resource: shared equipment, the department intranet, funding opportunities, the podcast, and the seminar series." />
+<meta property="og:title" content="Microbiology Resources" />
+<meta property="og:description" content="Every Department of Microbiology resource, in one place." />
+<meta property="og:url" content="https://ben-tenoever.github.io/microbiology/" />
+<meta name="theme-color" content="#4F2C85" />
+<style>
+:root {
+  --nyu-purple: #4F2C85;
+  --nyu-deep: #2a1a49;
+  --bg-light: #f5f5f7;
+  --card-bg: #ffffff;
+  --border-subtle: #e3e3ee;
+  --text-main: #222222;
+  --text-soft: #56566a;
+  --lav: #faf7ff;
+  --amber-bg: #fdf6e3;
+  --amber-line: #e6d3a3;
+  --amber-ink: #7a5200;
+}
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0; padding: 0; background: var(--bg-light); color: var(--text-main); line-height: 1.55; }
+header { background: #ffffff; color: var(--nyu-purple); padding: 1.1rem 2rem 1rem;
+  border-bottom: 5px solid var(--nyu-purple);
+  display: flex; align-items: center; gap: 1.15rem; flex-wrap: wrap; }
+header .brand { flex: 0 0 auto; display: flex; align-items: center; }
+header .brand img { height: 52px; width: auto; display: block; border-radius: .3rem; }
+header .brand + .titles { border-left: 1px solid var(--border-subtle); padding-left: 1.15rem; }
+header .titles { flex: 1 1 260px; min-width: 0; }
+header h1 { margin: 0; font-size: 1.9rem; color: var(--nyu-purple); }
+header p { margin: .2rem 0 0; color: var(--text-soft); font-size: .95rem; }
+@media (max-width: 560px) {
+  header { gap: .6rem; padding: 1rem 1rem .9rem; }
+  header .titles { flex: 1 1 100%; }
+  header .brand + .titles { border-left: 0; padding-left: 0; }
+  header .brand img { height: 40px; }
+  header h1 { font-size: 1.55rem; }
+}
+nav { position: sticky; top: 0; background: var(--lav); border-bottom: 1px solid #ddd4ff;
+  padding: .45rem 2rem; display: flex; gap: .35rem; flex-wrap: wrap; z-index: 10; }
+nav a { text-decoration: none; color: var(--nyu-purple); font-size: .9rem;
+  padding: .25rem .7rem; border-radius: 999px; font-weight: 500; }
+nav a:hover { background: rgba(79,44,133,.08); }
+nav a.here { background: var(--nyu-purple); color: #fff; }
+@media (max-width: 560px) { nav { padding: .45rem 1rem; gap: .2rem; } nav a { padding: .2rem .55rem; font-size: .85rem; } }
+main { max-width: 1060px; margin: 0 auto; padding: 2rem 2.25rem 3rem; }
+@media (max-width: 560px) { main { padding: 1.1rem 1rem 2.5rem; } }
+.card { background: var(--card-bg); border-radius: .9rem; padding: 1.3rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05); border: 1px solid var(--border-subtle); }
+@media (max-width: 560px) { .card { padding: 1.1rem; } }
+h2 { margin-top: 0; color: var(--nyu-purple); }
+.lede { max-width: 70ch; margin: 0; }
+.sub { color: var(--text-soft); font-size: .85rem; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #b99be6; outline-offset: 2px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-top: 1.25rem; align-items: stretch; }
+@media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+.res { display: flex; flex-direction: column; scroll-margin-top: 4rem; }
+.res .top { display: flex; gap: .85rem; align-items: center; }
+.ico { flex: 0 0 2.9rem; height: 2.9rem; border-radius: .7rem; background: var(--nyu-purple); color: #fff;
+  display: grid; place-items: center; }
+.ico svg { width: 1.45rem; height: 1.45rem; }
+.kicker { font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-soft); }
+.res h3 { margin: 0; font-size: 1.15rem; line-height: 1.25; color: var(--nyu-deep); }
+.res p { margin: .75rem 0 1rem; font-size: .92rem; }
+.res ul { margin: .5rem 0 1rem; padding-left: 1.1rem; font-size: .86rem; color: var(--text-soft); }
+.res li { margin: .12rem 0; }
+.res p + ul { margin-top: -.5rem; }
+.note { font-size: .8rem; color: var(--amber-ink); background: var(--amber-bg); border-left: 3px solid var(--amber-line);
+  padding: .35rem .6rem; border-radius: .3rem; margin: -.4rem 0 1rem; }
+.btn { font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; text-decoration: none;
+  display: flex; align-items: center; justify-content: center; gap: .45rem; border-radius: 999px; padding: .65rem 1.1rem;
+  border: 1.5px solid var(--nyu-purple); background: var(--nyu-purple); color: #fff; margin-top: auto; }
+.btn:hover { filter: brightness(1.12); box-shadow: 0 2px 8px rgba(79,44,133,.25); }
+.btn svg { width: 1em; height: 1em; }
+.more { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.more a { font-size: .8rem; font-weight: 600; color: var(--nyu-purple); text-decoration: none; background: #fff;
+  border: 1px solid var(--border-subtle); border-radius: 999px; padding: .22rem .7rem; }
+.more a:hover { border-color: var(--nyu-purple); background: rgba(79,44,133,.05); }
+details { margin-top: .85rem; border-top: 1px solid var(--border-subtle); padding-top: .55rem; }
+summary { cursor: pointer; font-size: .82rem; font-weight: 600; color: var(--nyu-purple); list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+ "; font-family: ui-monospace, Menlo, monospace; }
+details[open] summary::before { content: "− "; }
+.qrbox { display: flex; gap: 1rem; align-items: center; margin-top: .6rem; }
+.qrbox img { width: 132px; height: 132px; border: 1px solid var(--border-subtle); border-radius: .5rem; padding: .35rem; background: #fff; }
+.url { font-family: ui-monospace, Menlo, monospace; font-size: .78rem; color: var(--text-soft); word-break: break-all; }
+
+.share { display: grid; grid-template-columns: 210px 1fr; gap: 1.5rem; align-items: center; }
+@media (max-width: 640px) { .share { grid-template-columns: 1fr; justify-items: start; } }
+.share .qr { background: #fff; border: 1px solid var(--border-subtle); border-radius: .7rem; padding: .7rem; width: 210px; }
+.share .qr img { width: 100%; display: block; }
+.share a, footer a { color: var(--nyu-purple); font-weight: 600; }
+.pill { font-family: ui-monospace, Menlo, monospace; font-size: .88rem; background: var(--lav);
+  border: 1px solid #ece4fb; padding: .3rem .6rem; border-radius: .35rem; display: inline-block; word-break: break-all; }
+footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--lav);
+  font-size: .8rem; color: #555; text-align: center; }
+@media print { nav, details summary { display: none; } details > * { display: flex; } .card { box-shadow: none; break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="brand"><img src="https://ben-tenoever.github.io/grants/assets/nyulh-logo.png" alt="NYU Langone Health"
+    onerror="this.parentNode.remove()" /></span>
+  <span class="titles">
+    <h1>Microbiology Resources</h1>
+    <p>Department of Microbiology &middot; NYU Grossman School of Medicine</p>
+  </span>
+</header>
+
+<nav aria-label="Resources">
+  <a href="#top" class="here">All</a>
+  <a href="#equipment">Equipment</a>
+  <a href="#intranet">Intranet</a>
+  <a href="#funding">Funding</a>
+  <a href="#podcast">Podcast</a>
+  <a href="#seminars">Seminars</a>
+</nav>
+
+<main>
+
+  <section class="card">
+    <h2>Everything from the Departmental Address, in one place</h2>
+    <p class="lede">Each link and QR code from the 2026 address is below. Bookmark this page; it will be kept up to date as new resources are added.</p>
+  </section>
+
+  <div class="grid">
+
+    <article class="card res" id="equipment">
+      <div class="top">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6.5L4.6 18.2A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.7-2.8L14 9.5V3"/><path d="M7.5 15h9"/></svg></div>
+        <div><div class="kicker">Shared instruments</div><h3>Shared Equipment</h3></div>
+      </div>
+      <p>A searchable list of every instrument open to the department, with its room and floor.</p>
+      <ul><li>Centrifuges, imaging, ddPCR and more</li><li>Filter by type or by tower</li></ul>
+      <a class="btn" href="https://ben-tenoever.github.io/equipment/">Open directory <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <details><summary>QR code</summary><div class="qrbox"><img src="qr-equipment.svg" alt="QR code for the shared equipment directory" /><span class="url">ben-tenoever.github.io/equipment</span></div></details>
+    </article>
+
+    <article class="card res" id="intranet">
+      <div class="top">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg></div>
+        <div><div class="kicker">How the department works</div><h3>Department Intranet</h3></div>
+      </div>
+      <p>Who to ask, and what to do first, for the day-to-day work of the department.</p>
+      <ul><li>HR, onboarding and EH&amp;S training</li><li>Lab, building and emergencies</li><li>Finance, grants and travel</li><li>Seminars, defenses and education</li></ul>
+      <div class="note">Needs an NYU Langone sign-in.</div>
+      <a class="btn" href="https://nyulangone.sharepoint.com/sites/MicrobiologyDept">Open the intranet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <details><summary>QR code</summary><div class="qrbox"><img src="qr-intranet.svg" alt="QR code for the department intranet" /><span class="url">nyulangone.sharepoint.com/sites/MicrobiologyDept</span></div></details>
+    </article>
+
+    <article class="card res" id="funding">
+      <div class="top">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></div>
+        <div><div class="kicker">Faculty, postdocs &amp; students</div><h3>Funding Opportunities</h3></div>
+      </div>
+      <p>Open grant calls matched to teams, plus the fellowships that recur every year and their deadlines.</p>
+      <a class="btn" href="https://ben-tenoever.github.io/grants">Open funding site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="more" aria-label="Go straight to">
+        <a href="https://ben-tenoever.github.io/grants">Faculty grants</a>
+        <a href="https://ben-tenoever.github.io/grants/fellowships.html">Postdoc fellowships</a>
+        <a href="https://ben-tenoever.github.io/grants/fellowship-ideas.html">Postdoc project ideas</a>
+        <a href="https://ben-tenoever.github.io/grants/grad-fellowships.html">Grad fellowships</a>
+        <a href="https://ben-tenoever.github.io/grants/grad-project-ideas.html">Grad project ideas</a>
+      </div>
+      <details><summary>QR code</summary><div class="qrbox"><img src="qr-grants.svg" alt="QR code for the funding opportunities site" /><span class="url">ben-tenoever.github.io/grants</span></div></details>
+    </article>
+
+    <article class="card res" id="podcast">
+      <div class="top">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg></div>
+        <div><div class="kicker">Listen or download</div><h3>The Microbiology Podcast</h3></div>
+      </div>
+      <p>How the science in this department connects. Plays in any phone browser, with no app needed.</p>
+      <ul><li>Episode 1: Faculty Narratives 2026 (47 min)</li></ul>
+      <a class="btn" href="https://ben-tenoever.github.io/podcast/">Listen now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <details><summary>QR code</summary><div class="qrbox"><img src="qr-podcast.svg" alt="QR code for the podcast" /><span class="url">ben-tenoever.github.io/podcast</span></div></details>
+    </article>
+
+    <article class="card res" id="seminars">
+      <div class="top">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2c2.9.2 5 2.6 5 5.8"/></svg></div>
+        <div><div class="kicker">Wednesdays, 12:30&ndash;1:30</div><h3>Seminar Series</h3></div>
+      </div>
+      <p>The full 2026&ndash;27 schedule, kept up to date. Lunch is served in the 4th-floor room, ACLS West.</p>
+      <ul><li>See who is speaking next</li><li>Claim an open slot or book your defense</li></ul>
+      <a class="btn" href="https://ben-tenoever.github.io/seminars">See the schedule <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <details><summary>QR code</summary><div class="qrbox"><img src="qr-seminars.svg" alt="QR code for the seminar series" /><span class="url">ben-tenoever.github.io/seminars</span></div></details>
+    </article>
+
+  </div>
+
+  <section class="card" style="margin-top:1.5rem" id="share">
+    <h2>Share this page</h2>
+    <div class="share">
+      <div class="qr"><img src="qr-hub.svg" alt="QR code for this page" /></div>
+      <div>
+        <p style="margin-top:0">One code for everything above. Pass it on to anyone who missed the address.</p>
+        <span class="pill">ben-tenoever.github.io/microbiology</span>
+        <p class="sub"><a href="qr-hub.png" download>Download the QR code</a> for slides, posters or email.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Department of Microbiology &middot; NYU Grossman School of Medicine &middot;
+  <a href="https://github.com/Ben-tenOever/microbiology/issues/new?title=Resource%20suggestion">Suggest a resource</a>
+</footer>
+
+<script>
+(function () {
+  // highlight the nav pill for the section in view
+  var links = [].slice.call(document.querySelectorAll("nav a"));
+  function mark() {
+    var cur = "#top", y = window.scrollY + 140;
+    links.forEach(function (a) { var id = a.getAttribute("href"); var el = id === "#top" ? null : document.querySelector(id); if (el && el.offsetTop <= y) cur = id; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4 && window.scrollY > 0) cur = links[links.length - 1].getAttribute("href");
+    if (window.scrollY < 80) cur = "#top";
+    links.forEach(function (a) { a.classList.toggle("here", a.getAttribute("href") === cur); });
+  }
+  window.addEventListener("scroll", mark, { passive: true }); mark();
+})();
+</script>
+</body>
+</html>
