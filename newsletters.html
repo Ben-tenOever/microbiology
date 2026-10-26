@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Newsletter Archive &mdash; Department of Microbiology, NYU Grossman School of Medicine</title>
+<meta name="description" content="Archived issues of The Microscope, the quarterly newsletter of the Department of Microbiology at NYU Langone." />
+<meta property="og:title" content="Newsletter Archive" />
+<meta property="og:description" content="Every issue of The Microscope, the department&rsquo;s quarterly newsletter." />
+<meta property="og:url" content="https://ben-tenoever.github.io/microbiology/newsletters.html" />
+<meta name="theme-color" content="#4F2C85" />
+<style>
+:root {
+  --nyu-purple: #4F2C85;
+  --nyu-deep: #2a1a49;
+  --bg-light: #f5f5f7;
+  --card-bg: #ffffff;
+  --border-subtle: #e3e3ee;
+  --text-main: #222222;
+  --text-soft: #56566a;
+  --lav: #faf7ff;
+  --amber-bg: #fdf6e3;
+  --amber-line: #e6d3a3;
+  --amber-ink: #7a5200;
+}
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0; padding: 0; background: var(--bg-light); color: var(--text-main); line-height: 1.55; }
+header { background: #ffffff; color: var(--nyu-purple); padding: 1.1rem 2rem 1rem;
+  border-bottom: 5px solid var(--nyu-purple);
+  display: flex; align-items: center; gap: 1.15rem; flex-wrap: wrap; }
+header .brand { flex: 0 0 auto; display: flex; align-items: center; }
+header .brand img { height: 52px; width: auto; display: block; border-radius: .3rem; }
+header .brand + .titles { border-left: 1px solid var(--border-subtle); padding-left: 1.15rem; }
+header .titles { flex: 1 1 260px; min-width: 0; }
+header h1 { margin: 0; font-size: 1.9rem; color: var(--nyu-purple); }
+header p { margin: .2rem 0 0; color: var(--text-soft); font-size: .95rem; }
+@media (max-width: 560px) {
+  header { gap: .6rem; padding: 1rem 1rem .9rem; }
+  header .titles { flex: 1 1 100%; }
+  header .brand + .titles { border-left: 0; padding-left: 0; }
+  header .brand img { height: 40px; }
+  header h1 { font-size: 1.55rem; }
+}
+nav { position: sticky; top: 0; background: var(--lav); border-bottom: 1px solid #ddd4ff;
+  padding: .45rem 2rem; display: flex; gap: .35rem; flex-wrap: wrap; z-index: 10; }
+nav a { text-decoration: none; color: var(--nyu-purple); font-size: .9rem;
+  padding: .25rem .7rem; border-radius: 999px; font-weight: 500; }
+nav a:hover { background: rgba(79,44,133,.08); }
+nav a.here { background: var(--nyu-purple); color: #fff; }
+@media (max-width: 560px) { nav { padding: .45rem 1rem; gap: .2rem; } nav a { padding: .2rem .55rem; font-size: .85rem; } }
+main { max-width: 1060px; margin: 0 auto; padding: 2rem 2.25rem 3rem; }
+@media (max-width: 560px) { main { padding: 1.1rem 1rem 2.5rem; } }
+.card { background: var(--card-bg); border-radius: .9rem; padding: 1.3rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05); border: 1px solid var(--border-subtle); }
+@media (max-width: 560px) { .card { padding: 1.1rem; } }
+h2 { margin-top: 0; color: var(--nyu-purple); }
+.lede { max-width: 70ch; margin: 0; }
+.sub { color: var(--text-soft); font-size: .85rem; }
+a:focus-visible, button:focus-visible { outline: 3px solid #b99be6; outline-offset: 2px; }
+.kicker { font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-soft); }
+.btn { font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; text-decoration: none;
+  display: flex; align-items: center; justify-content: center; gap: .45rem; border-radius: 999px; padding: .65rem 1.1rem;
+  border: 1.5px solid var(--nyu-purple); background: var(--nyu-purple); color: #fff; margin-top: auto; }
+.btn:hover { filter: brightness(1.12); box-shadow: 0 2px 8px rgba(79,44,133,.25); }
+.btn svg { width: 1em; height: 1em; }
+.more { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.more a { font-size: .8rem; font-weight: 600; color: var(--nyu-purple); text-decoration: none; background: #fff;
+  border: 1px solid var(--border-subtle); border-radius: 999px; padding: .22rem .7rem; }
+.more a:hover { border-color: var(--nyu-purple); background: rgba(79,44,133,.05); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-top: 1.25rem; align-items: stretch; }
+@media (max-width: 400px) { .grid { grid-template-columns: 1fr; } }
+.issue { display: flex; flex-direction: column; }
+.issue .top { display: flex; gap: .85rem; align-items: center; }
+.ico { flex: 0 0 2.9rem; height: 2.9rem; border-radius: .7rem; background: var(--nyu-purple); color: #fff;
+  display: grid; place-items: center; }
+.ico svg { width: 1.45rem; height: 1.45rem; }
+.issue h3 { margin: 0; font-size: 1.15rem; line-height: 1.25; color: var(--nyu-deep); }
+.issue p { margin: .75rem 0 1rem; font-size: .92rem; color: var(--text-soft); }
+.meta { font-size: .8rem; color: var(--text-soft); margin: .15rem 0 1rem; }
+.note { font-size: .8rem; color: var(--amber-ink); background: var(--amber-bg); border-left: 3px solid var(--amber-line);
+  padding: .5rem .7rem; border-radius: .3rem; margin: 1.25rem 0 0; }
+footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--lav);
+  font-size: .8rem; color: #555; text-align: center; }
+footer a { color: var(--nyu-purple); font-weight: 600; }
+@media print { nav { display: none; } .card { box-shadow: none; break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="brand"><img src="https://ben-tenoever.github.io/grants/assets/nyulh-logo.png" alt="NYU Langone Health"
+    onerror="this.parentNode.remove()" /></span>
+  <span class="titles">
+    <h1>Microbiology Resources</h1>
+    <p>Department of Microbiology &middot; NYU Grossman School of Medicine</p>
+  </span>
+</header>
+
+<nav aria-label="Site">
+  <a href="./">Resources</a>
+  <a href="slides.html">Address slides</a>
+  <a href="conferences.html">Conferences</a>
+  <a href="newsletters.html" class="here" aria-current="page">Newsletters</a>
+</nav>
+
+<main>
+
+  <section class="card">
+    <h2>Newsletter Archive</h2>
+    <p class="lede">Every issue of <em>The Microscope</em>, the quarterly newsletter of the Department of Microbiology at NYU Langone. Each issue opens as a PDF in your browser, on a phone or a desktop.</p>
+
+    <div class="grid">
+
+      <article class="card issue">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></div>
+          <div><div class="kicker">Issue 4 &middot; Most recent</div><h3>June 2026</h3></div>
+        </div>
+        <p class="meta">24 pages &middot; PDF</p>
+        <a class="btn" href="newsletters/The_Microscope_2026_6.pdf">Read this issue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="more"><a href="newsletters/The_Microscope_2026_6.pdf" download>Download PDF</a></div>
+      </article>
+
+      <article class="card issue">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></div>
+          <div><div class="kicker">Issue 3</div><h3>February 2026</h3></div>
+        </div>
+        <p class="meta">21 pages &middot; PDF</p>
+        <a class="btn" href="newsletters/The_Microscope_2026_2.pdf">Read this issue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="more"><a href="newsletters/The_Microscope_2026_2.pdf" download>Download PDF</a></div>
+      </article>
+
+      <article class="card issue">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></div>
+          <div><div class="kicker">Issue 2</div><h3>September 2025</h3></div>
+        </div>
+        <p class="meta">18 pages &middot; PDF</p>
+        <a class="btn" href="newsletters/The_Microscope_2025_9.pdf">Read this issue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="more"><a href="newsletters/The_Microscope_2025_9.pdf" download>Download PDF</a></div>
+      </article>
+
+      <article class="card issue">
+        <div class="top">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 12h7M7 15h4"/></svg></div>
+          <div><div class="kicker">Issue 1 &middot; First issue</div><h3>April 2025</h3></div>
+        </div>
+        <p class="meta">12 pages &middot; PDF</p>
+        <a class="btn" href="newsletters/The_Microscope_2025_4.pdf">Read this issue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="more"><a href="newsletters/The_Microscope_2025_4.pdf" download>Download PDF</a></div>
+      </article>
+
+    </div>
+
+    <p class="note">New issues are added here as they are published.</p>
+  </section>
+
+</main>
+
+<footer>
+  Department of Microbiology &middot; NYU Grossman School of Medicine &middot;
+  <a href="https://github.com/Ben-tenOever/microbiology/issues/new?title=Newsletter%20archive">Suggest a correction</a>
+</footer>
+
+</body>
+</html>

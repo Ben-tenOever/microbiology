@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conferences &mdash; Department of Microbiology, NYU Grossman School of Medicine</title>
+<meta name="description" content="Upcoming conferences in microbiology, virology, immunology and related fields, with links to meeting websites and available abstract deadlines." />
+<meta property="og:title" content="Upcoming Conferences" />
+<meta property="og:description" content="Conferences in microbiology, virology, immunology and related fields." />
+<meta property="og:url" content="https://ben-tenoever.github.io/microbiology/conferences.html" />
+<meta name="theme-color" content="#4F2C85" />
+<style>
+:root {
+  --nyu-purple: #4F2C85;
+  --nyu-deep: #2a1a49;
+  --bg-light: #f5f5f7;
+  --card-bg: #ffffff;
+  --border-subtle: #e3e3ee;
+  --text-main: #222222;
+  --text-soft: #56566a;
+  --lav: #faf7ff;
+  --amber-bg: #fdf6e3;
+  --amber-line: #e6d3a3;
+  --amber-ink: #7a5200;
+}
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0; padding: 0; background: var(--bg-light); color: var(--text-main); line-height: 1.55; }
+header { background: #ffffff; color: var(--nyu-purple); padding: 1.1rem 2rem 1rem;
+  border-bottom: 5px solid var(--nyu-purple);
+  display: flex; align-items: center; gap: 1.15rem; flex-wrap: wrap; }
+header .brand { flex: 0 0 auto; display: flex; align-items: center; }
+header .brand img { height: 52px; width: auto; display: block; border-radius: .3rem; }
+header .brand + .titles { border-left: 1px solid var(--border-subtle); padding-left: 1.15rem; }
+header .titles { flex: 1 1 260px; min-width: 0; }
+header h1 { margin: 0; font-size: 1.9rem; color: var(--nyu-purple); }
+header p { margin: .2rem 0 0; color: var(--text-soft); font-size: .95rem; }
+@media (max-width: 560px) {
+  header { gap: .6rem; padding: 1rem 1rem .9rem; }
+  header .titles { flex: 1 1 100%; }
+  header .brand + .titles { border-left: 0; padding-left: 0; }
+  header .brand img { height: 40px; }
+  header h1 { font-size: 1.55rem; }
+}
+nav { position: sticky; top: 0; background: var(--lav); border-bottom: 1px solid #ddd4ff;
+  padding: .45rem 2rem; display: flex; gap: .35rem; flex-wrap: wrap; z-index: 10; }
+nav a { text-decoration: none; color: var(--nyu-purple); font-size: .9rem;
+  padding: .25rem .7rem; border-radius: 999px; font-weight: 500; }
+nav a:hover { background: rgba(79,44,133,.08); }
+nav a.here { background: var(--nyu-purple); color: #fff; }
+@media (max-width: 560px) { nav { padding: .45rem 1rem; gap: .2rem; } nav a { padding: .2rem .55rem; font-size: .85rem; } }
+main { max-width: 1060px; margin: 0 auto; padding: 2rem 2.25rem 3rem; }
+@media (max-width: 560px) { main { padding: 1.1rem 1rem 2.5rem; } }
+.card { background: var(--card-bg); border-radius: .9rem; padding: 1.3rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05); border: 1px solid var(--border-subtle); }
+@media (max-width: 560px) { .card { padding: 1.1rem; } }
+h2 { margin-top: 0; color: var(--nyu-purple); }
+.lede { max-width: 70ch; margin: 0; }
+.sub { color: var(--text-soft); font-size: .85rem; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #b99be6; outline-offset: 2px; }
+.btn { font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: .45rem; border-radius: 999px; padding: .65rem 1.1rem;
+  border: 1.5px solid var(--nyu-purple); background: var(--nyu-purple); color: #fff; }
+.btn:hover { filter: brightness(1.12); box-shadow: 0 2px 8px rgba(79,44,133,.25); }
+.btn svg { width: 1em; height: 1em; }
+.btn.ghost { background: #fff; color: var(--nyu-purple); }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; margin-top: 1.5rem; }
+.search { flex: 1 1 280px; position: relative; display: flex; align-items: center; }
+.search svg { position: absolute; left: .85rem; width: 1.05rem; height: 1.05rem; color: var(--text-soft); pointer-events: none; }
+.search input { font: inherit; font-size: .95rem; width: 100%; padding: .65rem 1rem .65rem 2.6rem;
+  border: 1px solid var(--border-subtle); border-radius: 999px; background: #fff; color: var(--text-main); }
+.search input:focus { outline: none; border-color: var(--nyu-purple); box-shadow: 0 0 0 3px rgba(79,44,133,.12); }
+.count { font-size: .85rem; color: var(--text-soft); margin: .85rem 0 0; }
+
+.tablewrap { margin-top: 1rem; overflow-x: auto; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .9rem; }
+thead th { text-align: left; vertical-align: bottom; color: var(--nyu-purple); font-size: .7rem;
+  letter-spacing: .09em; text-transform: uppercase; padding: .6rem .8rem; border-bottom: 2px solid #ddd4ff;
+  background: var(--lav); }
+tbody td { padding: .85rem .8rem; border-bottom: 1px solid var(--border-subtle); vertical-align: top; }
+tbody tr:hover { background: #fcfbff; }
+tbody tr.past { opacity: .72; }
+tbody td a { color: var(--nyu-purple); font-weight: 600; text-decoration: none; }
+tbody td a:hover { text-decoration: underline; }
+td:first-child { font-size: .95rem; line-height: 1.35; min-width: 13rem; }
+td.dates { white-space: nowrap; color: var(--text-soft); font-size: .86rem; }
+td.dates .dline { display: block; }
+td.dates .dline:first-child { color: var(--text-main); font-weight: 600; white-space: nowrap; }
+td:last-child { color: var(--text-soft); font-size: .86rem; }
+.pastbadge { display: inline-block; font-size: .62rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-soft); background: var(--bg-light);
+  border: 1px solid var(--border-subtle); border-radius: 999px; padding: .05rem .45rem; margin-left: .4rem;
+  vertical-align: middle; }
+.note { font-size: .8rem; color: var(--amber-ink); background: var(--amber-bg); border-left: 3px solid var(--amber-line);
+  padding: .5rem .7rem; border-radius: .3rem; margin: 1.1rem 0 0; }
+.empty { padding: 1.5rem .5rem; color: var(--text-soft); font-size: .9rem; }
+[hidden] { display: none !important; }
+
+@media (max-width: 720px) {
+  .tablewrap { overflow-x: visible; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tbody tr { border: 1px solid var(--border-subtle); border-radius: .7rem; background: #fff;
+    padding: .9rem 1rem; margin-bottom: .8rem; }
+  tbody tr:hover { background: #fff; }
+  tbody td { border: 0; padding: .3rem 0; }
+  td.dates { white-space: normal; }
+  td.dates .dline { display: inline; }
+  td.dates .dline + .dline::before { content: " \00b7  "; }
+  tbody td + td::before { content: attr(data-label); display: block; font-size: .62rem; font-weight: 700;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--nyu-purple); margin-bottom: .15rem; }
+}
+footer { border-top: 1px solid #ddd4ff; padding: 1rem 2rem; background: var(--lav);
+  font-size: .8rem; color: #555; text-align: center; }
+footer a { color: var(--nyu-purple); font-weight: 600; }
+@media print { nav, .toolbar { display: none; } .card { box-shadow: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="brand"><img src="https://ben-tenoever.github.io/grants/assets/nyulh-logo.png" alt="NYU Langone Health"
+    onerror="this.parentNode.remove()" /></span>
+  <span class="titles">
+    <h1>Microbiology Resources</h1>
+    <p>Department of Microbiology &middot; NYU Grossman School of Medicine</p>
+  </span>
+</header>
+
+<nav aria-label="Site">
+  <a href="./">Resources</a>
+  <a href="slides.html">Address slides</a>
+  <a href="conferences.html" class="here" aria-current="page">Conferences</a>
+  <a href="newsletters.html">Newsletters</a>
+</nav>
+
+<main>
+
+  <section class="card">
+    <h2>Upcoming Conferences</h2>
+    <p class="lede">Explore upcoming conferences in microbiology, virology, immunology, and related fields, with links to meeting websites and available abstract deadlines.</p>
+
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="q" placeholder="Search conferences, places, dates or deadlines" aria-label="Search conferences" autocomplete="off" />
+      </label>
+      <button type="button" class="btn ghost" id="pastbtn" hidden aria-expanded="false">Show past meetings</button>
+      <a class="btn" href="Microbiology-Conferences-2026-2027.xlsx" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 11 12 15.5 16.5 11M5 19h14"/></svg>
+        Download Excel List
+      </a>
+    </div>
+
+    <p class="count" id="count" role="status"></p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Conference</th>
+            <th scope="col">Dates &amp; Location</th>
+            <th scope="col">Summary &amp; Abstract Deadlines</th>
+          </tr>
+        </thead>
+        <tbody id="rows">
+      <tr data-end="2026-11-10">
+        <td data-label="Conference"><a href="https://www.nycrnasymposium.com/" target="_blank" rel="noopener">Tri-I RNA Symposium</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Nov 10, 2026</span><span class="dline">New York, NY</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">The 4th NYC RNA Symposium will take place on November 10, 2026, at Caspary Auditorium, The Rockefeller University. The meeting brings together the NYC RNA research community for selected research talks, poster sessions, and keynote presentations. Registration closes November 1, 2026, or when capacity is reached; Abstract submissions are closed.</td>
+      </tr>
+      <tr data-end="2026-11-15">
+        <td data-label="Conference"><a href="https://www.newenglandimmunology.org/" target="_blank" rel="noopener">New England Immunology Conference</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Nov 14–15, 2026</span><span class="dline">Woods Hole, MA</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Celebrating its 50th anniversary at the Marine Biological Laboratory, this regional meeting will feature immunology research talks and trainee presentations. Register by Nov 1; Abstract deadlines: Nov 1 for short talks and Nov 6 for posters.
+Micro Attendees: Kamal Khanna is among the speakers for this event</td>
+      </tr>
+      <tr data-end="2026-11-22">
+        <td data-label="Conference"><a href="https://www.astmh.org/annual-meeting" target="_blank" rel="noopener">ASTMH Annual Meeting</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Nov 18–22, 2026</span><span class="dline">National Harbor, MD</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">The American Society of Tropical Medicine and Hygiene meeting will cover parasitology, arboviruses, vector biology, tropical infections, and advances in prevention and treatment. Abstract submissions closed.</td>
+      </tr>
+      <tr data-end="2027-01-14">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/J12027" target="_blank" rel="noopener">Keystone: Innate Immunity—Molecular Mechanisms, Diseases &amp; Therapeutics</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Jan 11–14, 2027</span><span class="dline">Banff, Canada</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Held at the Fairmont Banff Springs, this symposium will explore innate immune mechanisms and their roles in disease and therapeutic development. It will run jointly with the T Cells symposium. Poster abstract deadline: Dec 21, 2026; Short-talk submissions closed.</td>
+      </tr>
+      <tr data-end="2027-01-14">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/J22027" target="_blank" rel="noopener">Keystone: T Cells—From Basic Biology to Therapeutic Applications</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Jan 11–14, 2027</span><span class="dline">Banff, Canada</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This symposium will connect fundamental T-cell biology with therapeutic applications, bringing together researchers studying cellular immunity and immune interventions. Poster abstract deadline: Dec 21, 2026; Short-talk submissions closed.</td>
+      </tr>
+      <tr data-end="2027-01-29">
+        <td data-label="Conference"><a href="https://imari.org/" target="_blank" rel="noopener">IMARI: Antimicrobial Resistance and Innovation</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Jan 27–29, 2027</span><span class="dline">Las Vegas, NV</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Organized by ASM and IDSA, IMARI will connect resistance mechanisms with antimicrobial discovery, diagnostics, surveillance, pharmacology, and clinical development. General abstract submissions closed.</td>
+      </tr>
+      <tr data-end="2027-02-05">
+        <td data-label="Conference"><a href="https://www.grc.org/tropical-infectious-diseases-conference/2027/" target="_blank" rel="noopener">GRC: Tropical Infectious Diseases</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Jan 31–Feb 5, 2027</span><span class="dline">Oxnard, CA</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This conference will connect host–pathogen biology with technologies for diagnostics, treatments, and vaccines against bacterial, fungal, parasitic, and viral infections. Application deadline: Jan 3, 2027</td>
+      </tr>
+      <tr data-end="2027-02-04">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/K12027" target="_blank" rel="noopener">Keystone: Global Virome in Health and Disease</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Feb 1–4, 2027</span><span class="dline">Geneva, Switzerland</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Held at the Crowne Plaza Geneva, this symposium will explore viral diversity, evolution, microbial interactions, and contributions of the virome to health and disease, from individual hosts to ecosystems. Abstract deadlines: Oct 21, 2026 for short talks; Jan 12, 2027 for posters.</td>
+      </tr>
+      <tr data-end="2027-03-04">
+        <td data-label="Conference"><a href="https://virology-meeting.de/" target="_blank" rel="noopener">Society for Virology Annual Meeting—GfV</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Mar 1–4, 2027</span><span class="dline">Frankfurt, Germany</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This meeting will bring together basic and clinical virology research, with discussions of viral pathogenesis, host–virus interactions, and emerging infections. Abstract deadline: Dec 6, 2026.</td>
+      </tr>
+      <tr data-end="2027-03-04">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/C12027" target="_blank" rel="noopener">Keystone: Tuberculosis—Basic Science Addressing Clinical Needs</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Mar 1–4, 2027</span><span class="dline">London, UK</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This symposium will connect mycobacterial biology, host immunity, and disease mechanisms with clinical challenges in tuberculosis prevention and treatment. Abstract deadlines: Nov 3, 2026 for short talks; Feb 8, 2027 for posters.</td>
+      </tr>
+      <tr data-end="2027-03-10">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/L62027" target="_blank" rel="noopener">Keystone: Immunomodulatory Microbiota in Health and Disease</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Mar 7–10, 2027</span><span class="dline">Banff, Canada</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This symposium will explore how microbial communities influence immunity, epithelial function, and disease, connecting mechanistic discoveries with therapeutic opportunities. Abstract deadlines: Nov 11, 2026 for short talks; Feb 15, 2027 for posters.</td>
+      </tr>
+      <tr data-end="2027-04-15">
+        <td data-label="Conference"><a href="https://www.isar-icar.com/" target="_blank" rel="noopener">International Conference on Antiviral Research—ICAR</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Apr 12–15, 2027</span><span class="dline">Calgary, Canada</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">ICAR will bring together researchers developing antiviral therapies across a broad range of viruses. Sessions will connect viral biology, therapeutic targets, drug discovery, and clinical development. Abstract deadlines: Nov 20, 2026 for general submissions; Jan 22, 2027 for posters only; Feb 19, 2027 for late-breaking abstracts.</td>
+      </tr>
+      <tr data-end="2027-05-04">
+        <td data-label="Conference"><a href="https://immunology2027.aai.org/" target="_blank" rel="noopener">AAI IMMUNOLOGY2027</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Apr 30–May 4, 2027</span><span class="dline">Los Angeles, CA</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">The American Association of Immunologists annual meeting will bring together research across innate and adaptive immunity, host defense, immune regulation, and therapeutic applications. Abstract deadline: Nov 17, 2026.</td>
+      </tr>
+      <tr data-end="2027-05-07">
+        <td data-label="Conference"><a href="https://www.grc.org/malaria-conference/2027/" target="_blank" rel="noopener">GRC: Malaria</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">May 2–7, 2027</span><span class="dline">Castelldefels, Spain</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This conference will connect discoveries in parasite biology, malaria pathogenesis, vector control, and chemoprevention with practical interventions. Application deadline: Apr 4, 2027.</td>
+      </tr>
+      <tr data-end="2027-05-06">
+        <td data-label="Conference"><a href="https://www.ws-virology.org/conference/wsv2027" target="_blank" rel="noopener">World Society for Virology Conference</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">May 3–6, 2027</span><span class="dline">Rabat, Morocco</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Under the theme “Viruses Challenging the World,” this conference will span human, animal, plant, and microbial virology, including emerging infections, viral immunity, vaccines, and antiviral research. Abstract deadline: Nov 30, 2026.</td>
+      </tr>
+      <tr data-end="2027-05-10">
+        <td data-label="Conference"><a href="https://ctegd.uga.edu/events/symposium/" target="_blank" rel="noopener">Molecular Parasitology &amp; Vector Biology Symposium</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">May 10, 2027</span><span class="dline">Athens, GA</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This University of Georgia symposium brings together researchers studying parasites, vectors, and host–parasite interactions through talks, posters, and a keynote presentation.</td>
+      </tr>
+      <tr data-end="2027-05-28">
+        <td data-label="Conference"><a href="https://www.grc.org/viruses-and-cells-conference/2027/" target="_blank" rel="noopener">GRC: Viruses and Cells</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">May 23–28, 2027</span><span class="dline">Castelldefels, Spain</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Sessions will explore viral replication, persistence, pathogenesis, and host interactions using single-molecule approaches, multiomics, computational models, and emerging experimental systems. Submit abstracts before Jan 18, 2027 for full short-talk consideration. Application deadline: Apr 25, 2027.</td>
+      </tr>
+      <tr data-end="2027-06-10">
+        <td data-label="Conference"><a href="https://eusv-congress.eu/" target="_blank" rel="noopener">European Congress of Virology</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">June 7–10, 2027</span><span class="dline">Cagliari/Sardinia, Italy</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This broad international congress will bring together the European virology community to share advances across virus biology and disease.</td>
+      </tr>
+      <tr data-end="2027-06-24">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/E12027" target="_blank" rel="noopener">Keystone: Cellular and Metabolic Dynamics of Host–Pathogen Interactions</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">June 21–24, 2027</span><span class="dline">Whistler, Canada</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This symposium will explore how infection reshapes metabolism and organelle function, and how host cells use these processes to defend against pathogens. Abstract deadlines: Feb 23, 2027 for short talks; May 31, 2027 for posters.</td>
+      </tr>
+      <tr data-end="2027-06-25">
+        <td data-label="Conference"><a href="https://asm.org/events/asm-microbe/home" target="_blank" rel="noopener">ASM Microbe</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">June 22–25, 2027</span><span class="dline">Chicago, IL</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">ASM Microbe will unite ASM Health, ASM Applied &amp; Environmental Microbiology, and ASM Mechanism Discovery, spanning microbial biology, infectious diseases, diagnostics, therapeutics, and environmental applications.</td>
+      </tr>
+      <tr data-end="2027-06-25">
+        <td data-label="Conference"><a href="https://www.embl.org/about/info/course-and-conference-office/events/ees27-07/" target="_blank" rel="noopener">EMBO &amp; EMBL: New Approaches and Concepts in Microbiology</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">June 22–25, 2027</span><span class="dline">Heidelberg, Germany, and online</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This symposium will explore bacterial physiology, communities, host and phage interactions, and technologies ranging from systems approaches to single-cell analysis.</td>
+      </tr>
+      <tr data-end="2027-07-08">
+        <td data-label="Conference"><a href="https://www.femsmicro.org/" target="_blank" rel="noopener">FEMS MICRO Congress &amp; Exhibition</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">July 5–8, 2027</span><span class="dline">Ljubljana, Slovenia</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Under the theme “Growing microbial futures,” this congress will span microbial health research, biotechnology, environmental innovation, and applications of microbial discoveries. Abstract deadline: Dec 15, 2026.</td>
+      </tr>
+      <tr data-end="2027-07-23">
+        <td data-label="Conference"><a href="https://www.grc.org/microbial-adhesion-and-signal-transduction-conference/2027/" target="_blank" rel="noopener">GRC: Microbial Adhesion and Signal Transduction</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">July 18–23, 2027</span><span class="dline">Newport, RI</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Sessions will examine microbial sensing and adaptation, surface structures, motility, secretion, signaling, resistance, and mechanisms of colonization and persistence. Application deadline: June 20, 2027.</td>
+      </tr>
+      <tr data-end="2027-07-22">
+        <td data-label="Conference"><a href="https://www.asv.org/asv-2027" target="_blank" rel="noopener">American Society for Virology (ASV) Annual Meeting</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">July 19–22, 2027</span><span class="dline">Madison, WI</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">ASV will bring together the virology community to discuss viral replication, host interactions, immunity, pathogenesis, vaccines, and antiviral therapies. Abstract deadline: Feb 1, 2027. Applications for ASV Teacher Travel Award and Annual Meeting Award deadline: Feb 8, 2027.</td>
+      </tr>
+      <tr data-end="2027-07-28">
+        <td data-label="Conference"><a href="https://www.herpesvirusworkshop.com/" target="_blank" rel="noopener">International Herpesvirus Workshop</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">July 24–28, 2027</span><span class="dline">Fort Collins, CO</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This meeting brings together researchers studying herpesvirus replication, gene regulation, latency, immunity, pathogenesis, and approaches to prevention and treatment.</td>
+      </tr>
+      <tr data-end="2027-08-13">
+        <td data-label="Conference"><a href="https://www.grc.org/staphylococcal-diseases-conference/2027/" target="_blank" rel="noopener">GRC: Staphylococcal Diseases</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Aug 8–13, 2027</span><span class="dline">Waterville Valley, NH</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">The conference will examine staphylococcal biology and host–bacterial interactions during infection and colonization, with discussion of unpublished research. Application deadline: July 11, 2027.</td>
+      </tr>
+      <tr data-end="2027-09-17">
+        <td data-label="Conference"><a href="https://cytokinesociety.org/meetings/future-meetings/?amp=1" target="_blank" rel="noopener">Cytokines 2027</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Sep 14–17, 2027</span><span class="dline">Sydney, Australia</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">The 15th annual Cytokines meeting brings together research on cytokines, interferons, and chemokines, including immune signaling, inflammation, infection, and therapeutic applications.</td>
+      </tr>
+      <tr data-end="2027-09-18">
+        <td data-label="Conference"><a href="https://meetings.cshl.edu/meetings.aspx?meet=host" target="_blank" rel="noopener">CSHL Microbial Pathogenesis &amp; Host Response</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Sep 14–18, 2027</span><span class="dline">Cold Spring Harbor, NY</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This meeting will explore bacterial and fungal pathogenesis through molecular microbiology, cell biology, immunology, and genomics, emphasizing mechanisms of infection and host responses. Abstract deadline: June 25, 2027.</td>
+      </tr>
+      <tr data-end="2027-09-23">
+        <td data-label="Conference"><a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting/J12028" target="_blank" rel="noopener">Keystone: Positive-Strand RNA Viruses</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Sep 20–23, 2027</span><span class="dline">Hanoi, Vietnam</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This symposium will explore positive-strand RNA virus pathogenesis, host immunity, and countermeasure development, running jointly with the Biosecurity and Infectious Diseases symposium.</td>
+      </tr>
+      <tr data-end="2027-09-29">
+        <td data-label="Conference"><a href="https://eswiconference.org/" target="_blank" rel="noopener">ESWI Influenza Conference</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Sep 26–29, 2027</span><span class="dline">Valencia, Spain</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">This conference will bring together research on influenza and other acute respiratory viruses, connecting virology, vaccines, antiviral treatments, epidemiology, and public health.</td>
+      </tr>
+      <tr data-end="2027-11-11">
+        <td data-label="Conference"><a href="https://www.astmh.org/annual-meeting/past-meetings#future-meetings" target="_blank" rel="noopener">ASTMH Annual Meeting</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Nov 7–11, 2027</span><span class="dline">Denver, CO</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">ASTMH will bring together researchers studying tropical infections, parasites, arboviruses, vectors, and interventions, spanning basic science through clinical and population research.</td>
+      </tr>
+      <tr data-end="2027-12-09">
+        <td data-label="Conference"><a href="https://www.alphavisa.com/euro-arbo/2027/" target="_blank" rel="noopener">EuroArbo: European Conference on Arboviruses</a></td>
+        <td data-label="Dates &amp; Location" class="dates"><span class="dline">Dec 7–9, 2027</span><span class="dline">Montpellier, France</span></td>
+        <td data-label="Summary &amp; Abstract Deadlines">Held at Le Corum, this conference will connect human, animal, and plant arbovirus research. Sessions will cover viral emergence and evolution, host and vector interactions, pathogenesis, immunity, and approaches to surveillance and control. Abstract deadline: June 15, 2027.</td>
+      </tr>
+        </tbody>
+      </table>
+      <p class="empty" id="empty" hidden>No conferences match that search.</p>
+    </div>
+
+    <p class="note">Deadlines are included where available. Check conference websites for updates.</p>
+  </section>
+
+</main>
+
+<footer>
+  Department of Microbiology &middot; NYU Grossman School of Medicine &middot;
+  <a href="https://github.com/Ben-tenOever/microbiology/issues/new?title=Conference%20suggestion">Suggest a conference</a>
+</footer>
+
+<script>
+(function () {
+  var rows = [].slice.call(document.querySelectorAll("#rows tr"));
+  var q = document.getElementById("q");
+  var pastbtn = document.getElementById("pastbtn");
+  var count = document.getElementById("count");
+  var empty = document.getElementById("empty");
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var showPast = false;
+
+  rows.forEach(function (tr) {
+    var end = tr.getAttribute("data-end");
+    var d = end ? new Date(end + "T23:59:59") : null;
+    tr.dataset.past = (d && d < today) ? "1" : "0";
+    tr.dataset.text = tr.textContent.toLowerCase().replace(/\s+/g, " ");
+    if (tr.dataset.past === "1") {
+      tr.classList.add("past");
+      var cell = tr.querySelector("td");
+      if (cell && !cell.querySelector(".pastbadge")) {
+        var b = document.createElement("span");
+        b.className = "pastbadge"; b.textContent = "Past";
+        cell.appendChild(b);
+      }
+    }
+  });
+
+  var pastCount = rows.filter(function (tr) { return tr.dataset.past === "1"; }).length;
+  if (pastCount) {
+    pastbtn.hidden = false;
+    pastbtn.textContent = "Show " + pastCount + " past meeting" + (pastCount === 1 ? "" : "s");
+  }
+
+  function apply() {
+    var term = (q.value || "").trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function (tr) {
+      var isPast = tr.dataset.past === "1";
+      var ok = (showPast || !isPast) && (!term || tr.dataset.text.indexOf(term) !== -1);
+      tr.hidden = !ok;
+      if (ok) shown++;
+    });
+    empty.hidden = shown !== 0;
+    count.textContent = shown + (shown === 1 ? " conference" : " conferences") +
+      (term ? " matching \u201c" + q.value.trim() + "\u201d" : "") +
+      (showPast || !pastCount ? "" : " \u00b7 " + pastCount + " past hidden");
+  }
+
+  q.addEventListener("input", apply);
+  pastbtn.addEventListener("click", function () {
+    showPast = !showPast;
+    pastbtn.setAttribute("aria-expanded", showPast ? "true" : "false");
+    pastbtn.textContent = (showPast ? "Hide " : "Show ") + pastCount + " past meeting" + (pastCount === 1 ? "" : "s");
+    apply();
+  });
+  apply();
+})();
+</script>
+</body>
+</html>
